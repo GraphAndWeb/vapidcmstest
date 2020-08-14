@@ -20,6 +20,25 @@
   </header>
 
   <section>
+    {{#section about}}
+    <div>
+      <h2>{{title}}</h2>
+      {{body type=html}}
+    </div>
+    {{/section}}
+  </section>
+
+  <section>
+    <h2>Un petit blog</h2>
+  {{#section blogs multiple=true}}
+    <div>
+      <h5><a href="{{_permalink}}">{{titre}}</a></h5>
+      <div>{{contenu type=html}}</div>
+    </div>
+  {{/section}}
+  </section>
+
+  <section>
     <div class="container">
       <header>
         <h2>Contact Yourself</h2>
